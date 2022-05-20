@@ -1,0 +1,21 @@
+name: samba-4_13_13-block
+type: sw.block
+description: >-
+  A block that lets you drop a samba server into your balena project.
+post-provisioning:
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: 'https://github.com/bubblesnet/samba-4_13_13-block'
+  logo:
+    type: blob.asset
+    data:
+      url: >-
+        https://raw.githubusercontent.com/bubblesnet/samba-4_13_13-block/main/block_logo.png
+data:
+  applicationEnvironmentVariables:
+  defaultDeviceType: raspberry-pi
+  supportedDeviceTypes:
+    - raspberrypi3
+version: 0.1.1

@@ -1,0 +1,21 @@
+version: "0.0"
+
+services:
+  samba-4_13_13-block:
+    environment:
+      ## Required system variables ##
+      DBUS_SYSTEM_BUS_ADDRESS: "unix:path=/host/run/dbus/system_bus_socket"
+    build:
+      context: .
+      dockerfile: Dockerfile.template
+#    network_mode: "host"   Leave it off the host network to keep it private behind APIs
+    ports:
+      - "445:445"
+      - "139:139"
+    restart: always
+    volumes:
+      - 'resin-data:/samba_conf'
+    labels:
+      io.balena.features.dbus: "1"
+    cap_add:
+    privileged: true
