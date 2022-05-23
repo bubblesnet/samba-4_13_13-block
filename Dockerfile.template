@@ -1,10 +1,9 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-golang
-# this is debian 10npm
 
 RUN install_packages vim samba git
 
 COPY ca-certificates.crt /etc/ssl/certs/
-COPY smb.conf /etc/samba
+# COPY smb.conf /etc/samba
 COPY restart.sh /
 
 RUN /bin/bash -c 'chmod +x /restart.sh; ls -la /'
