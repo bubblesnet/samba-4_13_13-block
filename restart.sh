@@ -1,5 +1,5 @@
 #!/bin/bash
-cp /samba_shared/*.conf /etc/samba
+cp /samba_shared/conf/smb.conf /etc/samba
 if [ ! -f "/etc/samba/smb.conf" ]
 then
   echo "There was no smb.conf in /samba_shared so we're using the sample!"
