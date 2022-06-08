@@ -10,4 +10,4 @@ fi
 
 /usr/sbin/useradd -m -p $SAMBA_PASSWORD -s /bin/bash $SAMBA_USER; (echo $SAMBA_PASSWORD; echo $SAMBA_PASSWORD) | /usr/bin/smbpasswd -a -s $SAMBA_USER
 /usr/sbin/smbd restart
-tail -F /var/log/samba/smbd.log
+tail -F /samba_shared/var/log/samba/smbd.log

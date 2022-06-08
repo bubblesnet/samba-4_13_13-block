@@ -14,7 +14,7 @@ services:
       - "139:139"
     restart: always
     volumes:
-      - 'resin-data:/samba_conf'
+      - 'resin-data:/samba_shared'
     labels:
       io.balena.features.dbus: "1"
     cap_add:
